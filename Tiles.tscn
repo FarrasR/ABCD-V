@@ -8,7 +8,6 @@ extents = Vector2( 32, 32 )
 [node name="Tiles" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-editor/display_folded = true
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 64, 64 )
