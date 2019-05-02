@@ -14,6 +14,12 @@ var double_jump = false
 
 
 func _physics_process(delta):
+	
+	if Input.is_action_just_pressed("restart_level"):
+		get_tree().reload_current_scene()
+
+
+	
 	var move_dir = 0
 	if Input.is_action_pressed("move_right"):
         move_dir += 1

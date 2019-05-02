@@ -1,15 +1,12 @@
 extends Area2D
 
 var player_in_collission = false
-var energy_remaining = true
-var energy_value = 5
 
-signal energy_taken(value)
 
 
 func _ready():
 	connect("body_entered", self, "_on_player_enter")
-	connect("body_exited", self, "_on_player_exited")
+	connect("body_exited", self, "_on_player_exited")	
 	pass 
 	
 func _on_player_enter(body):
@@ -24,13 +21,7 @@ func _on_player_exited(body):
 	
 func _process(delta):
 	if player_in_collission == true and Input.is_action_just_pressed("interact"):
-		print("interact")
-		if energy_remaining == true:
-			emit_signal("energy_taken",energy_value)
-			var label = get_node("Sprite/Value")
-			label.set_text("0")
-			var EnergyVariables = get_node("/root/EnergyVariables")
-			EnergyVariables.AddEnergy(energy_value)
-			energy_remaining = false
-			print("energy here")
+		var EnergyVariables = get_node("/root/EnergyVariables")
+		EnergyVariables.RestartEnergy()
+		print("yoyoyoyo")
 	pass
