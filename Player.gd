@@ -12,6 +12,9 @@ var y_velo = 0
 var facing_right = false
 var double_jump = false
 
+func _ready():
+	var lbl = get_node("Label")
+	lbl.set_text("0")
 
 func _physics_process(delta):
 	
@@ -66,3 +69,7 @@ func play_anim(anim_name):
     if anim_player.is_playing() and anim_player.current_animation == anim_name:
         return
     anim_player.play(anim_name)
+	
+func updatelbl(updateval):
+	var lbl = get_node("Label")
+	lbl.set_text(str(updateval))

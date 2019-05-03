@@ -33,4 +33,11 @@ func _process(delta):
 			EnergyVariables.AddEnergy(energy_value)
 			energy_remaining = false
 			print("energy here")
+			var lock1 = get_node("../Lock1")
+			var energ = get_node("../Player")
+			energ.updatelbl(str(EnergyVariables.CurrentEnergy))
+			if EnergyVariables.CurrentEnergy == lock1.energyvalue:
+				lock1.unlock()
+			else:
+				lock1.lock()
 	pass
