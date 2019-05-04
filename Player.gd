@@ -13,13 +13,20 @@ var facing_right = false
 var double_jump = false
 
 func _ready():
-	var lbl = get_node("Label")
+	var lbl = get_node("Sprite/Label")
 	lbl.set_text("0")
+	var camera = Camera2D.new()
+	camera.set_name("Player_Camera")
+	add_child(camera)
+	
+	var playerCamera = get_node("Player_Camera")
+	playerCamera.current = true
+		
 
 func _physics_process(delta):
-	
 	if Input.is_action_just_pressed("restart_level"):
-		get_tree().reload_current_scene()
+		var EnergyVariables = get_node("/root/EnergyVariables")
+		EnergyVariables.RestartLevel()
 
 
 	
@@ -70,6 +77,3 @@ func play_anim(anim_name):
         return
     anim_player.play(anim_name)
 	
-func updatelbl(updateval):
-	var lbl = get_node("Label")
-	lbl.set_text(str(updateval))
