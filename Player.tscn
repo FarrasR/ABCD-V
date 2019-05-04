@@ -88,3 +88,5 @@ anims/idle = SubResource( 3 )
 anims/jump = SubResource( 4 )
 anims/walk = SubResource( 5 )
 
+[node name="Player_Camera" type="Camera2D" parent="."]
+

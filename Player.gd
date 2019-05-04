@@ -15,10 +15,6 @@ var double_jump = false
 func _ready():
 	var lbl = get_node("Sprite/Label")
 	lbl.set_text("0")
-	var camera = Camera2D.new()
-	camera.set_name("Player_Camera")
-	add_child(camera)
-	
 	var playerCamera = get_node("Player_Camera")
 	playerCamera.current = true
 		
@@ -27,7 +23,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("restart_level"):
 		var EnergyVariables = get_node("/root/EnergyVariables")
 		EnergyVariables.RestartLevel()
-
 
 	
 	var move_dir = 0
