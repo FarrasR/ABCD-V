@@ -1,13 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://platformer_char_spritesheet.png" type="Texture" id=2]
+[ext_resource path="res://manaspc.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 11.6347 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 10.1028
+
+[sub_resource type="DynamicFont" id=6]
+outline_color = Color( 0.0392157, 0.0352941, 0.0352941, 1 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "idle"
@@ -70,7 +75,6 @@ position = Vector2( 1.53678, 5.31098 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-editor/display_folded = true
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -78,10 +82,13 @@ region_rect = Rect2( 64, 64, 64, 64 )
 region_filter_clip = true
 
 [node name="Label" type="Label" parent="Sprite"]
-margin_left = 3.37515
-margin_top = -43.8078
-margin_right = 43.3751
-margin_bottom = -29.8078
+margin_left = 11.0
+margin_top = -42.0
+margin_right = 34.0
+margin_bottom = -26.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/idle = SubResource( 3 )

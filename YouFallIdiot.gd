@@ -9,6 +9,7 @@ func _ready():
 	
 func _on_player_enter(body):
 	if (body.get_name() == "Player"):
-		get_tree().reload_current_scene()
+		var EnergyVariables = get_node("/root/EnergyVariables")
+		EnergyVariables.RestartLevel()
 		
 

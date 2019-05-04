@@ -24,7 +24,6 @@ func _physics_process(delta):
 		var EnergyVariables = get_node("/root/EnergyVariables")
 		EnergyVariables.RestartLevel()
 
-	
 	var move_dir = 0
 	if Input.is_action_pressed("move_right"):
         move_dir += 1
@@ -35,6 +34,9 @@ func _physics_process(delta):
 	var grounded = is_on_floor()
 	
 	
+	var EnergyVariables = get_node("/root/EnergyVariables")
+	var lbl = get_node("Sprite/Label")
+	lbl.set_text(str(EnergyVariables.CurrentEnergy))
 	
 	y_velo += GRAVITY
 	if grounded and Input.is_action_just_pressed("jump"):
