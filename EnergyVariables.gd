@@ -23,7 +23,8 @@ func NextLevel():
 	CurrentLevel = CurrentLevel+1
 	if CurrentLevel == 2:
 		get_tree().change_scene("res://Level_2.tscn")
-		
+	if CurrentLevel == 3:
+		get_tree().change_scene("res://Level_3.tscn")
 
 
 

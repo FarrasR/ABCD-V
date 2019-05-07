@@ -16,7 +16,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 
 [node name="nextzone" parent="." instance=ExtResource( 2 )]
-position = Vector2( -224, 96 )
+position = Vector2( -204, 96 )
 
 [node name="energynode" type="Node2D" parent="."]
 editor/display_folded = true
@@ -28,7 +28,6 @@ position = Vector2( 32, 96 )
 position = Vector2( 1250, 416 )
 
 [node name="locknode" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -1216, -320 )
 
 [node name="Lock" parent="locknode" instance=ExtResource( 4 )]
@@ -52,7 +51,6 @@ position = Vector2( 1120, 160 )
 energyvalue = 10
 
 [node name="locknode2" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Lock" parent="locknode2" instance=ExtResource( 4 )]
 position = Vector2( 1120, 416 )
@@ -81,4 +79,3 @@ tile_data = PoolIntArray( -65543, 0, 0, -65542, 0, 0, -7, 1, 0, -6, 1, 0, 65529,
 
 [node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 224, 157.763 )
-
