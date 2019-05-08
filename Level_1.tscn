@@ -9,6 +9,9 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=7]
 
 [node name="Level_1" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="Instruction" type="Sprite" parent="."]
 position = Vector2( 434.118, 26.2567 )
@@ -19,7 +22,6 @@ texture = ExtResource( 1 )
 position = Vector2( -204, 96 )
 
 [node name="energynode" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Energy_Ball" parent="energynode" instance=ExtResource( 3 )]
 position = Vector2( 32, 96 )
@@ -51,6 +53,7 @@ position = Vector2( 1120, 160 )
 energyvalue = 10
 
 [node name="locknode2" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Lock" parent="locknode2" instance=ExtResource( 4 )]
 position = Vector2( 1120, 416 )

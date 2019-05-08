@@ -47,6 +47,7 @@ position = Vector2( -209.513, 32.0874 )
 energyvalue = 15
 
 [node name="energi_node" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Energy_Ball" parent="energi_node" instance=ExtResource( 6 )]
 position = Vector2( 182.461, 31.0454 )
@@ -60,6 +61,7 @@ position = Vector2( 603.152, -352.378 )
 energy_value = 4
 
 [node name="Lock2" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Lock" parent="Lock2" instance=ExtResource( 5 )]
 position = Vector2( 286.642, -96.7809 )
@@ -74,6 +76,7 @@ position = Vector2( 286.642, 30.2789 )
 energyvalue = 4
 
 [node name="lock3" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Lock" parent="lock3" instance=ExtResource( 5 )]
 position = Vector2( 541.473, -352.099 )

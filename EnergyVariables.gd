@@ -2,6 +2,8 @@ extends Node
 
 var CurrentEnergy = 0
 var CurrentLevel = 1
+signal Energy_Changed 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -9,6 +11,7 @@ func _ready():
 
 func AddEnergy(value):
 	CurrentEnergy+=value
+	emit_signal("Energy_Changed")
 	
 func RestartEnergy():
 	CurrentEnergy=0
@@ -25,9 +28,3 @@ func NextLevel():
 		get_tree().change_scene("res://Level_2.tscn")
 	if CurrentLevel == 3:
 		get_tree().change_scene("res://Level_3.tscn")
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

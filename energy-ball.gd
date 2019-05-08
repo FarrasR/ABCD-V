@@ -25,7 +25,6 @@ func _on_player_exited(body):
 	
 func _process(delta):
 	if player_in_collission == true and Input.is_action_just_pressed("interact"):
-		print("interact")
 		if energy_remaining == true:
 			emit_signal("energy_taken",energy_value)
 			var label = get_node("Sprite/Value")

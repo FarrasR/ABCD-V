@@ -1,20 +1,24 @@
 extends KinematicBody2D
 
 var locked = true
+onready var EnergyVariables = get_node("/root/EnergyVariables") 
 export var energyvalue = 5
 
 func _ready():
+	EnergyVariables.connect("Energy_Changed", self, "_on_energy_changed")
 	get_node("Label").set_text(str(energyvalue))
 
-func _process(delta):
-	var EnergyVariables = get_node("/root/EnergyVariables")
+
+func _on_energy_changed():
 	if EnergyVariables.CurrentEnergy == energyvalue and locked == true:
 		unlock()
 		locked = false
-	
 	if EnergyVariables.CurrentEnergy != energyvalue and locked == false:
 		lock()
 		locked = true
+	pass
+
+func _process(delta):
 	pass
 
 func unlock():
