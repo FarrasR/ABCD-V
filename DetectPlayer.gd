@@ -26,6 +26,13 @@ func _on_player_exited(body):
 		
 
 func _process(delta):
+	if player_in_collission:
+		var bodu= get_overlapping_bodies()
+		for i in range(0, bodu.size()):
+			if (bodu[i].get_name() == "Player"):
+				player_position = bodu[i].get_global_position()
+		
+		
 	if player_in_collission == true and cooldown == true:
 		cooldown = false
 		get_node("Timer").start()

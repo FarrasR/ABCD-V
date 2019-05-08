@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://youfallidiot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://skull.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Laser.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -22,7 +21,4 @@ position = Vector2( 426.75, 237.263 )
 scale = Vector2( 12.9087, 0.400622 )
 
 [node name="Skull" parent="." instance=ExtResource( 4 )]
-position = Vector2( 150, -41.125 )
-
-[node name="Laser" parent="." instance=ExtResource( 5 )]
-position = Vector2( -162, -81.125 )
+position = Vector2( 114, -77.125 )
