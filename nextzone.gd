@@ -1,12 +1,13 @@
 extends Area2D
 
 var player_in_collission = false
-
+onready var anim_player = $AnimationPlayer
 
 
 func _ready():
 	connect("body_entered", self, "_on_player_enter")
 	connect("body_exited", self, "_on_player_exited")	
+	anim_player.play("Spinning")
 	pass 
 	
 func _on_player_enter(body):

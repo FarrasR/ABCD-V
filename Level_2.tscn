@@ -1,107 +1,109 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://tiles.tres" type="TileSet" id=2]
-[ext_resource path="res://youfallidiot.tscn" type="PackedScene" id=3]
-[ext_resource path="res://nextzone.tscn" type="PackedScene" id=4]
-[ext_resource path="res://LockTemplate.tscn" type="PackedScene" id=5]
-[ext_resource path="res://energy-ball_temp.tscn" type="PackedScene" id=6]
+[ext_resource path="res://tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://youfallidiot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://nextzone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://LockTemplate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://energy-ball_temp.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
 
 [node name="Level_2" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 726.256, 21.5573 )
-
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 2 )
+tile_set = ExtResource( 1 )
 format = 1
 tile_data = PoolIntArray( -524283, 0, 0, -524282, 0, 0, -458748, 0, 0, -458747, 1, 0, -327679, 0, 0, -327678, 0, 0, -327677, 0, 0, -327673, 0, 0, -327672, 0, 0, -327671, 0, 0, -327670, 0, 0, -262143, 1, 0, -262141, 1, 0, -262140, 0, 0, -196607, 1, 0, -196604, 1, 0, -196603, 0, 0, -131071, 1, 0, -65535, 1, 0, -65529, 0, 0, 6, 0, 0, 7, 1, 0, 9, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 1, 0, 65545, 1, 0, 65546, 0, 0, 65547, 0, 0 )
 
-[node name="fallzone" parent="." instance=ExtResource( 3 )]
+[node name="fallzone" parent="." instance=ExtResource( 2 )]
 position = Vector2( 42.4007, 357.755 )
 scale = Vector2( 13, 1 )
 
-[node name="nextzone" parent="." instance=ExtResource( 4 )]
+[node name="nextzone" parent="." instance=ExtResource( 3 )]
 position = Vector2( -146.011, 30.7578 )
 
 [node name="Lock" type="Node" parent="."]
+editor/display_folded = true
 
-[node name="Lock" parent="Lock" instance=ExtResource( 5 )]
+[node name="Lock" parent="Lock" instance=ExtResource( 4 )]
 position = Vector2( -83.1687, 32.5942 )
 energyvalue = 15
 
-[node name="Lock2" parent="Lock" instance=ExtResource( 5 )]
+[node name="Lock2" parent="Lock" instance=ExtResource( 4 )]
 position = Vector2( -82.5695, -31.8309 )
 energyvalue = 15
 
-[node name="Lock3" parent="Lock" instance=ExtResource( 5 )]
+[node name="Lock3" parent="Lock" instance=ExtResource( 4 )]
 position = Vector2( -209.406, -31.5139 )
 energyvalue = 15
 
-[node name="Lock4" parent="Lock" instance=ExtResource( 5 )]
+[node name="Lock4" parent="Lock" instance=ExtResource( 4 )]
 position = Vector2( -146.446, -31.3974 )
 energyvalue = 15
 
-[node name="Lock5" parent="Lock" instance=ExtResource( 5 )]
+[node name="Lock5" parent="Lock" instance=ExtResource( 4 )]
 position = Vector2( -209.513, 32.0874 )
 energyvalue = 15
 
 [node name="energi_node" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Energy_Ball" parent="energi_node" instance=ExtResource( 6 )]
+[node name="Energy_Ball" parent="energi_node" instance=ExtResource( 5 )]
 position = Vector2( 182.461, 31.0454 )
 
-[node name="Energy_Ball2" parent="energi_node" instance=ExtResource( 6 )]
+[node name="Energy_Ball2" parent="energi_node" instance=ExtResource( 5 )]
 position = Vector2( 606.797, -32.4008 )
 energy_value = 6
 
-[node name="Energy_Ball3" parent="energi_node" instance=ExtResource( 6 )]
+[node name="Energy_Ball3" parent="energi_node" instance=ExtResource( 5 )]
 position = Vector2( 603.152, -352.378 )
 energy_value = 4
 
 [node name="Lock2" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Lock" parent="Lock2" instance=ExtResource( 5 )]
+[node name="Lock" parent="Lock2" instance=ExtResource( 4 )]
 position = Vector2( 286.642, -96.7809 )
 energyvalue = 10
 
-[node name="Lock2" parent="Lock2" instance=ExtResource( 5 )]
+[node name="Lock2" parent="Lock2" instance=ExtResource( 4 )]
 position = Vector2( 286.642, -33.2789 )
 energyvalue = 6
 
-[node name="Lock3" parent="Lock2" instance=ExtResource( 5 )]
+[node name="Lock3" parent="Lock2" instance=ExtResource( 4 )]
 position = Vector2( 286.642, 30.2789 )
 energyvalue = 4
 
 [node name="lock3" type="Node2D" parent="."]
 editor/display_folded = true
 
-[node name="Lock" parent="lock3" instance=ExtResource( 5 )]
+[node name="Lock" parent="lock3" instance=ExtResource( 4 )]
 position = Vector2( 541.473, -352.099 )
 energyvalue = 10
 
-[node name="Lock2" parent="lock3" instance=ExtResource( 5 )]
+[node name="Lock2" parent="lock3" instance=ExtResource( 4 )]
 position = Vector2( 670.066, -352.378 )
 energyvalue = 10
 
-[node name="Lock3" parent="lock3" instance=ExtResource( 5 )]
+[node name="Lock3" parent="lock3" instance=ExtResource( 4 )]
 position = Vector2( 540.706, -415.88 )
 energyvalue = 10
 
-[node name="Lock4" parent="lock3" instance=ExtResource( 5 )]
+[node name="Lock4" parent="lock3" instance=ExtResource( 4 )]
 position = Vector2( 669.421, -416.291 )
 energyvalue = 10
 
-[node name="Lock5" parent="lock3" instance=ExtResource( 5 )]
+[node name="Lock5" parent="lock3" instance=ExtResource( 4 )]
 position = Vector2( 540.706, -479.438 )
 energyvalue = 10
 
-[node name="Lock6" parent="lock3" instance=ExtResource( 5 )]
+[node name="Lock6" parent="lock3" instance=ExtResource( 4 )]
 position = Vector2( 668.888, -480.615 )
 energyvalue = 10
 
-[node name="Lock3" parent="." instance=ExtResource( 5 )]
+[node name="Lock3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 96.5475, 33.8677 )
 energyvalue = 15
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 726.256, 21.5573 )
+

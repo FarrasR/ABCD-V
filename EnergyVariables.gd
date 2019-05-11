@@ -27,4 +27,6 @@ func NextLevel():
 	if CurrentLevel == 2:
 		get_tree().change_scene("res://Level_2.tscn")
 	if CurrentLevel == 3:
-		get_tree().change_scene("res://Level_3.tscn")
+		get_tree().change_scene("res://Test_Level.tscn")
+	emit_signal("Energy_Changed")
+	print("ganti level")

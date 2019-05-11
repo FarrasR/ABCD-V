@@ -12,12 +12,15 @@ var y_velo = 0
 var facing_right = false
 var double_jump = false
 
+export var initial_energy = 0
+
 func _ready():
 	var lbl = get_node("Sprite/Label")
 	lbl.set_text("0")
 	var playerCamera = get_node("Player_Camera")
 	playerCamera.current = true
-		
+	var EnergyVariables = get_node("/root/EnergyVariables")
+	EnergyVariables.AddEnergy(initial_energy)		
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("restart_level"):
