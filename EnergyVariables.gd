@@ -11,11 +11,15 @@ func _ready():
 
 func AddEnergy(value):
 	CurrentEnergy+=value
-	emit_signal("Energy_Changed")
+	emitting()
 	
 func RestartEnergy():
 	CurrentEnergy=0
 	
+	
+func emitting():
+	emit_signal("Energy_Changed")
+	print("emitting ")
 	
 func RestartLevel():
 	RestartEnergy()
@@ -27,6 +31,7 @@ func NextLevel():
 	if CurrentLevel == 2:
 		get_tree().change_scene("res://Level_2.tscn")
 	if CurrentLevel == 3:
-		get_tree().change_scene("res://Test_Level.tscn")
-	emit_signal("Energy_Changed")
+		get_tree().change_scene("res://Level_3.tscn")
+		
+	emitting()
 	print("ganti level")
