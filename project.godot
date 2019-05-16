@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="abcd-v"
-run/main_scene="res://Level_1.tscn"
+run/main_scene="res://Main_Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
