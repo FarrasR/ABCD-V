@@ -10,4 +10,4 @@ func _input_event(viewport, event, shape_idx):
         self.on_click()
 
 func on_click():
-    get_tree().change_scene("res://Level_1.tscn")
+    get_tree().quit()
