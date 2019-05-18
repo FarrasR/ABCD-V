@@ -10,7 +10,7 @@ func _ready():
 
 
 func _on_energy_changed():
-	if (EnergyVariables.CurrentEnergy % energyvalue) == 0:
+	if (EnergyVariables.CurrentEnergy % energyvalue) == 0 and EnergyVariables.CurrentEnergy != 0:
 		unlock()
 		locked = false
 	else:
