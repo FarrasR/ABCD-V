@@ -27,4 +27,5 @@ script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 shape = SubResource( 2 )
+
 [connection signal="colission_detected" from="killzone" to="." method="_on_killzone_colission_detected"]

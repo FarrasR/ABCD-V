@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const MOVE_SPEED = 100
+const MOVE_SPEED = 200
 var dir = Vector2(0,1)
 var newangle = 0
 
@@ -16,5 +16,8 @@ func change_dir(newdir, parentdir):
 
 
 func _on_killzone_colission_detected():
-	get_parent().remove_child(self)
+	killself()
 	pass 
+	
+func killself():
+	self.queue_free()

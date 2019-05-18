@@ -34,7 +34,7 @@ collision_layer = 2
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0, -23.7758 )
+position = Vector2( 0, -20.6764 )
 scale = Vector2( 2, 1.71968 )
 texture = ExtResource( 2 )
 region_rect = Rect2( 680, 66, 0, 0 )
