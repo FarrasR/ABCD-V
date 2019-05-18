@@ -10,7 +10,7 @@ func _ready():
 
 
 func _on_energy_changed():
-	if EnergyVariables.CurrentEnergy >= energyvalue:
+	if EnergyVariables.CurrentEnergy > energyvalue:
 		print("bigger")
 		unlock()
 		locked = false

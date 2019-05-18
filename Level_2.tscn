@@ -25,7 +25,7 @@ scale = Vector2( 0.462396, 0.462396 )
 texture = ExtResource( 2 )
 
 [node name="nextzone" parent="." instance=ExtResource( 3 )]
-position = Vector2( -204, 96 )
+position = Vector2( -224, 96 )
 
 [node name="energynode" type="Node2D" parent="."]
 
@@ -36,11 +36,10 @@ position = Vector2( 32, 96 )
 position = Vector2( 1250, 416 )
 
 [node name="locknode" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( -1216, -320 )
 
 [node name="Lock" parent="locknode" instance=ExtResource( 5 )]
-position = Vector2( 1120, 416 )
+position = Vector2( 1120, 415.642 )
 energyvalue = 10
 
 [node name="Lock2" parent="locknode" instance=ExtResource( 5 )]

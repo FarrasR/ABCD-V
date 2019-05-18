@@ -54,7 +54,7 @@ margin_right = 17.3138
 margin_bottom = 20.1123
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.886275, 0.282353, 0.0352941, 1 )
-text = "5"
+text = "0"
 align = 1
 valign = 1
 
