@@ -28,7 +28,6 @@ texture = ExtResource( 2 )
 position = Vector2( -204, 96 )
 
 [node name="energynode" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Energy_Ball" parent="energynode" instance=ExtResource( 4 )]
 position = Vector2( 32, 96 )

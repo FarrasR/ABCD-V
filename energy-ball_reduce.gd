@@ -31,7 +31,8 @@ func _process(delta):
 			var label = get_node("Sprite/Value")
 			label.set_text("0")
 			var EnergyVariables = get_node("/root/EnergyVariables")
-			EnergyVariables.AddEnergy(energy_value)
+			var minusvalue = - energy_value
+			EnergyVariables.AddEnergy(minusvalue)
 			energy_remaining = false
 			glowing_anim.stop(true)
 	pass

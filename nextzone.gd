@@ -19,8 +19,7 @@ func _on_player_exited(body):
 		player_in_collission = false
 	
 func _process(delta):
-	if player_in_collission == true and Input.is_action_just_pressed("interact"):
-		print("noice")
+	if player_in_collission == true:
 		var EnergyVariables = get_node("/root/EnergyVariables")
 		EnergyVariables.NextLevel()
 	pass

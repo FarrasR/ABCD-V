@@ -10,7 +10,8 @@ func _ready():
 
 
 func AddEnergy(value):
-	CurrentEnergy+=value
+	CurrentEnergy=CurrentEnergy + value
+	print(CurrentEnergy)
 	emitting()
 	
 func RestartEnergy():
