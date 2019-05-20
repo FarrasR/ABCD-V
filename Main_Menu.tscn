@@ -44,4 +44,3 @@ shape = SubResource( 2 )
 [node name="temporaryquitbutton" type="Sprite" parent="QuitButton"]
 position = Vector2( 175.061, 174.837 )
 texture = ExtResource( 5 )
-
