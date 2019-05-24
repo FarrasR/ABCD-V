@@ -16,6 +16,7 @@ export var initial_energy = 0
 
 func _ready():
 	var lbl = get_node("Sprite/Label")
+	lbl.add_color_override("font_color", Color(1,1,1))
 	lbl.set_text("0")
 	var playerCamera = get_node("Player_Camera")
 	playerCamera.current = true
